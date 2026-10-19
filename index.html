@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suspended Sediment, Clay Minerals, and Lead</title>
+<style>
+:root{--ink:#202b35;--muted:#526273;--paper:#f4f6f8;--card:#fff;--accent:#2c6472}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:#173a46;color:white;padding:52px 20px}header div,main,footer{max-width:980px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;color:#b8d9df}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;margin:.4rem 0 1rem}
+header p{max-width:760px;color:#e2eef0}.pill{display:inline-block;border:1px solid #d2a74c;color:#ffe3a2;border-radius:99px;padding:4px 10px;font-size:.82rem}
+main{padding:28px 20px 48px}.card{background:var(--card);padding:24px;border-radius:16px;margin:18px 0;box-shadow:0 6px 24px #182b3810}
+h2{color:var(--accent);margin-top:0}figure{margin:0}img{width:100%;height:auto;border-radius:8px;border:1px solid #e0e6ea}figcaption{font-size:.92rem;color:var(--muted);margin-top:10px}
+.note{border-left:4px solid #c18c24;background:#fff8e8;padding:14px 16px;border-radius:6px}
+footer{padding:0 20px 40px;color:var(--muted);font-size:.9rem}code{background:#eef1f4;padding:2px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<header><div>
+<div class="eyebrow">Geological Science · Data Visualization Practice</div>
+<h1>Suspended Sediment, Clay Minerals, and Lead (Pb)</h1>
+<p>A Python plotting exercise inspired by a senior project on the provenance and mineralogical analysis of lead-contaminated suspended sediments in the Kwai Yai River, Kanchanaburi Province.</p>
+<span class="pill">Illustrative dataset only</span>
+</div></header>
+<main>
+<section class="card"><h2>Project objective</h2>
+<p>This example demonstrates how data from two analytical approaches can be visualized together: X-ray diffraction (XRD) to characterize mineral composition and atomic absorption spectroscopy (AAS) to quantify lead (Pb). A real interpretation requires paired XRD and AAS results from the same samples, suitable quality control, and consistent units.</p>
+<div class="note"><strong>Data limitation:</strong> All values used in these plots were generated for practice. They are not real measurements, are not taken from a published dataset, and do not represent observed conditions in the Kwai Yai River. Do not cite them as research findings.</div>
+</section>
+<section class="card"><h2>Figure 1. Pb concentration versus total clay minerals</h2>
+<figure><img src="figures/illustrative_Pb_vs_clay_minerals.png" alt="Scatter plot of illustrative lead concentration against total clay minerals">
+<figcaption>Scatter plot using synthetic example values. The dashed line is a demonstration-only linear fit, not evidence of a real environmental relationship.</figcaption></figure>
+<p><strong>How to read it:</strong> Each point represents one illustrative sample. In a real study, the horizontal axis could represent a verified clay-mineral measure and the vertical axis a Pb concentration measured from the corresponding sample. A trend should only be interpreted after checking analytical uncertainty, sample pairing, and possible confounding factors.</p>
+</section>
+<section class="card"><h2>Figure 2. Illustrative clay-mineral composition by sample</h2>
+<figure><img src="figures/illustrative_clay_mineral_composition.png" alt="Stacked bar chart of illustrative clay mineral proportions">
+<figcaption>Stacked bars compare the example proportions of illite, kaolinite, chlorite, and smectite across sample IDs. Values are synthetic.</figcaption></figure>
+<p><strong>How to read it:</strong> A comparable plot based on measured XRD results could help describe mineralogical differences between sampling locations. Mineral proportions should be calculated using an appropriate and documented method.</p>
+</section>
+<section class="card"><h2>Methods and reproducibility</h2>
+<p>The input table is supplied in CSV and Excel formats. The Python script reads the CSV with <code>pandas</code>, uses <code>matplotlib</code> to generate plots, and saves the figures as PNG files. To reproduce locally, install <code>pandas</code>, <code>numpy</code>, and <code>matplotlib</code>, then run the script from the project root.</p>
+</section>
+<section class="card"><h2>Reference and further reading</h2>
+<p>GitHub Docs. (n.d.). <em>Creating a GitHub Pages site.</em> <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site</a></p>
+<p>This page is a student-created coding demonstration, not a publication reporting new geochemical measurements.</p>
+</section>
+</main>
+<footer>Prepared for educational data-visualization practice. Replace illustrative data with verified measurements before scientific interpretation.</footer>
+</body></html>
